@@ -1,0 +1,5 @@
+streamlit 
+google.generativeai
+psycopg2
+
+#  USER rootuser WITH PASSWORD 'mypassword123';
