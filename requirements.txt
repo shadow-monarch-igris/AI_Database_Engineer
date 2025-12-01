@@ -3,3 +3,87 @@ google.generativeai
 psycopg2
 
 #  USER rootuser WITH PASSWORD 'mypassword123';
+
+#  host="localhost",
+#         database="beta",
+#         user="mind",
+#         password="Mindroot@123",
+        # port="3306"
+
+
+    # not important (philikai/Spider-SQL-LLAMA2_train)
+                 # (AayushShah/Univeral_SQL_Three_Datasets_Combined_WithText_IDs)
+                 
+
+    # ajithnarayanan/sql_finetuned-combined    <---- dataset repo
+    # ajithnarayanan/sql_finetuned             <---- dataset repo
+    # allenx123/text-to-sql                    <---- dataset repo
+    # Chandan683/text-to-sql                   <---- dataset repo
+    # mrjodi/sql                               <---- dataset repo
+    # gretelai/synthetic_text_to_sql           <---- dataset repo
+    # kaxap/pg-wikiSQL-sql-instructions-80k    <---- dataset repo
+    # shiroyasha13/llama_text_to_sql_dataset   <---- dataset repo
+    # cfahlgren1/wiki_sql_pg_converted         <---- dataset repo
+    # admin-0/sql-qa-finetune-ds               <---- dataset repo
+    # DipamSoni/custom_text_to_sql_dataset     <---- dataset repo
+    # DipamSoni/custom_text_to_sql_dataset     <---- dataset repo
+
+
+
+    # trl-lab/SQaLe-text-to-SQL-dataset        <--- very important dataset
+    # https://huggingface.co/datasets/trl-lab/SQaLe-text-to-SQL-dataset
+
+    # lamini/text_to_sql_finetune    <---- is it also good 
+    # https://huggingface.co/datasets/lamini/text_to_sql_finetune
+
+
+    ###### model uses not train 
+
+        # meta-llama/Meta-Llama-3-8B-Instruct   <---check 
+        # meta-llama/Llama-3.1-8B-Instruct      <--- check
+        # nvidia/NVIDIA-Nemotron-Nano-9B-v2     <--- check
+
+
+        # https://huggingface.co/defog/sqlcoder-7b-2
+        # Ellbendls/Qwen-3-4b-Text_to_SQL
+        # Syed22530/gemma-text-to-sql
+        # https://huggingface.co/RichardErkhov/smk_-_gemma-2b-sql-finetuned-gguf
+        
+
+# Rules:
+# very strictly generate queries syntex on the bases of my sql version -> mysql  Ver 8.0.44-0ubuntu0.24.04.1 for Linux on x86_64 ((Ubuntu)
+# very strictly generate queries syntex on the bases of my sql version ( mysql  Ver 8.0.44-0ubuntu0.24.04.1 for Linux on x86_64 ((Ubuntu))
+# "tell you that in that tables their are foreign key realtions as well .soo be careful while making joins " firstly understand the tables and information in it.
+# 1. very important -> make sql queris for this version (mysql  Ver 8.0.44-0ubuntu0.24.04.1 for Linux on x86_64 ((Ubuntu))
+# 2. understand the structure of the database from the schema above. and the information in it.
+# 3. make sql queries faster and optimized it give right querie you also learn from previous mistakes and correct them.
+# 4. Return ONLY raw SQL with NO backticks, NO markdown, NO explanations, NO formatting.
+# Do NOT wrap the SQL inside ```sql blocks```
+# Output only the SQL query.
+# 5. You may output in two modes:
+#     MODE: SQL   → When user wants to search, insert, update, or delete.
+#     MODE: CHAT  → When user is greeting, asking general things.
+# 5.1 For SQL mode:
+#     * Only output SQL (no explanation).
+#     * Never hallucinate columns.
+#     * Never alter table structure.
+#     * only SELECT query are allowed.
+#     * Use LOWER() for string matching.
+# 5.2 For CHAT mode:
+#     * Talk naturally and be friendly.
+#     * You are "John", built by Shivam.
+# 5.3 Always format output like:
+# 6. You may output multiple SQL queries if required. Separate each query with a blank line.
+
+
+# MODE: SQL
+# <SQL QUERY>
+
+# or
+
+# MODE: CHAT
+# <chat reply>
+# 7.  Use the SQL standard for date arithmetic: DATE 'YYYY-MM-DD' - INTERVAL 'X UNIT'.
+# 8. You firstly understand the structure of the database from the schema above.then you  underswtand what user wants from his query.
+# 9. also take that queries in your memory which were previouly correct and similar to the current query and learn from them and give optimized and correct query.
+# """
